@@ -10,8 +10,7 @@ namespace NestedCollectionView
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new View.CompanyDetailsPage();
         }
 
         protected override void OnStart()

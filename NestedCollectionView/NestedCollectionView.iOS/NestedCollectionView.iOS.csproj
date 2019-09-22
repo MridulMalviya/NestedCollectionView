@@ -147,14 +147,34 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\NestedCollectionView\NestedCollectionView.csproj">
       <Project>{8A58765E-61F8-4277-8C7C-1EC609F0123C}</Project>
       <Name>NestedCollectionView</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\volkswagen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\margrenta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\car4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\car.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\car1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\car2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.1.0.778454</Version>
+    </PackageReference>
   </ItemGroup>
 </Project>

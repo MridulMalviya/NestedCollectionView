@@ -1,11 +1,7 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using System;
 
 namespace NestedCollectionView.Droid
 {
@@ -14,12 +10,19 @@ namespace NestedCollectionView.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            try
+            {
+                TabLayoutResource = Resource.Layout.Tabbar;
+                ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+                base.OnCreate(savedInstanceState);
+                Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
+                global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+                LoadApplication(new App());
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

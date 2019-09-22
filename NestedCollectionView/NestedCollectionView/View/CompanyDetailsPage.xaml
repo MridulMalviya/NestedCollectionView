@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NestedCollectionView.View.CompanyDetailsPage"
+             xmlns:vm="clr-namespace:NestedCollectionView.ViewModel">
+    <ContentPage.BindingContext>
+        <vm:CompanyViewModel/>
+    </ContentPage.BindingContext>
+    <ContentView>
+        <Grid>
+            <CollectionView  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                ItemsSource="{Binding CompanyList}"
+                ItemSizingStrategy="MeasureFirstItem">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="12"  HeightRequest="200" WidthRequest="200" BackgroundColor="LightBlue" Opacity="0.5">
+                            <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Image Source="{Binding CompanyLogo}" Aspect="AspectFit"/>
+                                    <Label Text="{Binding CompanyName}" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Start"/>
+                                </Grid>
+                                <ScrollView Grid.Row="1" Orientation="Horizontal">
+                                    <StackLayout  BindableLayout.ItemsSource="{Binding ProductList}" Orientation="Horizontal">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <Frame CornerRadius="10" BackgroundColor="red" Opacity="0.5"  HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                    <Grid>
+                                                        <Image Source="{Binding ProductLogo}"  Aspect="AspectFill"/>
+                                                        <Label Text="{Binding ProductName}" TextColor="Black"  HorizontalOptions="Center" VerticalOptions="Start"/>
+                                                    </Grid>
+                                                </Frame>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
+                                </ScrollView>
+                          
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentView>
+</ContentPage>
+
+
+    
