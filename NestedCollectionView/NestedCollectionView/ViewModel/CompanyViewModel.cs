@@ -38,18 +38,17 @@ namespace NestedCollectionView.ViewModel
             ProductModel productModel2 = new ProductModel() { ProductLogo = "car2.jpg", ProductName = "KWID 1" };
             ProductModel productModel3 = new ProductModel() { ProductLogo = "car3.jpg", ProductName = "KWID 2" };
 
-            CompanyModel companyModel = new CompanyModel() { CompanyLogo= "margrenta.jpg", CompanyName="Margrenta ",ProductList=new ObservableCollection<ProductModel>() { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
-            CompanyModel companyModel1 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ObservableCollection<ProductModel>() { productModel2, productModel3 } };
+            CompanyModel companyModel = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ProductModel[] { productModel, productModel1, productModel2, productModel3 } };
+            CompanyModel companyModel1 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ProductModel[] { productModel2, productModel3 } };
 
-            CompanyModel companyModel2 = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ObservableCollection<ProductModel>() { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
-            CompanyModel companyModel3 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ObservableCollection<ProductModel>() { productModel2, productModel3 } };
+            CompanyModel companyModel2 = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ProductModel[] { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
+            CompanyModel companyModel3 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ProductModel[] { productModel2, productModel3 } };
 
-            CompanyModel companyModel4 = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ObservableCollection<ProductModel>() { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
-            CompanyModel companyModel5 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ObservableCollection<ProductModel>() { productModel2, productModel3 } };
+            CompanyModel companyModel4 = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ProductModel[] { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
+            CompanyModel companyModel5 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new  ProductModel[] { productModel2, productModel3 } };
 
-            CompanyModel companyModel6 = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ObservableCollection<ProductModel>() { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
-            CompanyModel companyModel7 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ObservableCollection<ProductModel>() { productModel2, productModel3 } };
-
+            CompanyModel companyModel6 = new CompanyModel() { CompanyLogo = "margrenta.jpg", CompanyName = "Margrenta ", ProductList = new ProductModel[] { productModel, productModel1, productModel2, productModel3, productModel, productModel1, productModel2, productModel3 } };
+            CompanyModel companyModel7 = new CompanyModel() { CompanyLogo = "volkswagen.jpg", CompanyName = "Volkswagen ", ProductList = new ProductModel[] { productModel2, productModel3 } };
 
             CompanyList.Add(companyModel);
             CompanyList.Add(companyModel1);

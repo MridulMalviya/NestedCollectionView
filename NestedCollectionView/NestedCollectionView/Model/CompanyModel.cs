@@ -9,20 +9,20 @@ namespace NestedCollectionView.Model
     {
         public string CompanyLogo { get; set; }
         public string CompanyName { get; set; }
-      //  public ProductModel[]  ProductList { get; set; }
-        private ObservableCollection<ProductModel> _productList = null;
-        public ObservableCollection<ProductModel> ProductList
-        {
-            get
-            {
-                if (_productList == null)
-                {
-                    _productList = new ObservableCollection<ProductModel>();
-                }
-                return _productList;
-            }
-            set { _productList = value; }
-        }
+       public ProductModel[]  ProductList { get; set; }
+        //private ObservableCollection<ProductModel> _productList = null;
+        //public ObservableCollection<ProductModel> ProductList
+        //{
+        //    get
+        //    {
+        //        if (_productList == null)
+        //        {
+        //            _productList = new ObservableCollection<ProductModel>();
+        //        }
+        //        return _productList;
+        //    }
+        //    set { _productList = value; }
+        //}
 
     }
 }
